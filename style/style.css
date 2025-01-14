@@ -1,0 +1,89 @@
+:root{
+    --background-color: #212121;
+    --secondare-color:#cccccc;
+    --premire-color:#3498db;
+    --helper-color:#226592;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: var(--secondare-color);
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.keyboard{
+    width: 700px;
+    height: 350px;
+}
+
+.words{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 4rem;
+}
+
+.word{
+    height: 50px;
+    width: 60px;
+    background-color: var(--premire-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.word:active{
+    background-color: var(--helper-color);
+}
+
+.input{
+    margin-top: 15rem;
+    margin-left: 1rem;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    bottom: 5rem;
+    height: 10px;
+}
+
+.input::after{
+    position: absolute;
+    content: ' ';
+    height: 5px;
+    width: 100%;
+    background-color: var(--premire-color);
+    bottom: -2rem;
+    margin-top: 1rem;
+    border-radius: 3px;
+    left: 0;
+}
+
+.logo{
+    z-index: 999;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo img{
+    height: 50px;
+}
